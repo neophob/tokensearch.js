@@ -34,9 +34,9 @@
     "url": "https://github.com/neophob/tokensearch.js/issues"
   },
   "scripts": {
-    "test": "istanbul cover --hook-run-in-context ./node_modules/mocha/bin/_mocha -- --reporter list",
+    "test": "_mocha -- \"test/**/*.js\"",
     "jshint": "jshint --verbose ./lib/tokensearch.js",
-    "coverage": "istanbul check-coverage --statements 80 --functions 80 --lines 80 --branches 80",
+    "coverage": "istanbul cover --hook-run-in-context ./node_modules/mocha/bin/_mocha -- --reporter list && istanbul check-coverage --statements 80 --functions 80 --lines 80 --branches 80",
     "release": "npm test && npm version patch -m 'Upgrade version to %s' && npm publish && git push --tags",
     "bowerrelease": "bower version patch -m 'Upgrade version to %s'"
   },
