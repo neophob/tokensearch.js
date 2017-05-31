@@ -13,7 +13,7 @@ Inspired by https://github.com/krisk/Fuse, users.json file is ripped from this p
 ```
 Tokensearch.defaultOptions = {
   //split strings with those delimiters, default delimiters: space and dash
-  delimiterRegex: /[\s-]+/,
+  delimiter: /[\s-]+/,
 
   // At what point does the match algorithm give up. A threshold of '0.0' requires a perfect match
   // (of both letters and location), a threshold of '1.0' would match anything.
