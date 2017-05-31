@@ -1,6 +1,6 @@
 {
   "name": "tokensearch.js",
-  "version": "0.6.0",
+  "version": "0.6.1",
   "description": "Substring token search",
   "main": "./lib/tokensearch.js",
   "author": {
