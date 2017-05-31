@@ -37,8 +37,6 @@
     "test": "istanbul cover --hook-run-in-context ./node_modules/mocha/bin/_mocha -- --reporter list",
     "jshint": "jshint --verbose ./lib/tokensearch.js",
     "coverage": "istanbul check-coverage --statements 80 --functions 80 --lines 80 --branches 80",
-    "clean": "rm ./lib/tokensearch*",
-    "gitcommit": "git commit -am 'update minified code' | cat && git push | cat",
     "release": "npm test && npm version patch -m 'Upgrade version to %s' && npm publish && git push --tags",
     "bowerrelease": "bower version patch -m 'Upgrade version to %s'"
   },
