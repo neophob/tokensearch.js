@@ -15,9 +15,16 @@ describe('searchtest.js - dup use case', function() {
     const result = tokenSearch.search('ADAPPA ASHRAY AMARNATH');
     //THEN
     expect(result.length).to.equal(1);
-    expect(result[0].score).to.equal(0);
-    expect(result[0].item).to.exist;
-    expect(result[0].item.name).to.have.string('ADAPPA');
+    expect(result[0]).to.deep.equal({
+      item: {
+        name: 'ADAPPA ASHRAY AMARNATH ',
+        CML_rank: '64400',
+        registrationNumber: '1001061',
+        alloted: null
+      },
+      score: 0,
+      maxScore: 18
+    });
   });
 
   it('no dup search, multiple collection keys', function() {
