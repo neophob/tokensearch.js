@@ -1,6 +1,6 @@
 {
   "name": "tokensearch.js",
-  "version": "0.5.28",
+  "version": "0.6.0",
   "description": "Substring token search",
   "main": "./lib/tokensearch.js",
   "author": {
@@ -21,15 +21,14 @@
   ],
   "license": "MIT",
   "devDependencies": {
-    "mocha": "~2.4.5",
-    "chai": "~3.5.0",
-    "uglify-js": "~2.6.2",
+    "chai": "^4.0.0",
+    "istanbul": "^0.4.5",
     "jshint": "~2.9.1",
-    "pre-commit": "~1.1.2",
-    "istanbul": "~0.4.2"
+    "mocha": "^3.4.2",
+    "pre-commit": "~1.1.2"
   },
   "engines": {
-    "node": ">=4.2.0"
+    "node": ">=6.0.0"
   },
   "bugs": {
     "url": "https://github.com/neophob/tokensearch.js/issues"
@@ -38,9 +37,8 @@
     "test": "istanbul cover --hook-run-in-context ./node_modules/mocha/bin/_mocha -- --reporter list",
     "jshint": "jshint --verbose ./lib/tokensearch.js",
     "coverage": "istanbul check-coverage --statements 80 --functions 80 --lines 80 --branches 80",
-    "clean": "rm ./lib/tokensearch.min.js",
-    "minify": "uglifyjs lib/tokensearch.js --screw-ie8 --stats --compress --mangle -o lib/tokensearch.min.js",
-    "gitcommit": "npm run minify && git commit -am 'update minified code' | cat && git push | cat",
+    "clean": "rm ./lib/tokensearch*",
+    "gitcommit": "git commit -am 'update minified code' | cat && git push | cat",
     "release": "npm test && npm version patch -m 'Upgrade version to %s' && npm publish && git push --tags",
     "bowerrelease": "bower version patch -m 'Upgrade version to %s'"
   },
