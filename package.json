@@ -1,6 +1,6 @@
 {
   "name": "tokensearch.js",
-  "version": "0.7.1",
+  "version": "0.8.0",
   "description": "Substring token search",
   "main": "./lib/tokensearch.js",
   "author": {
@@ -28,7 +28,7 @@
     "pre-commit": "~1.1.2"
   },
   "engines": {
-    "node": ">=4.0.0"
+    "node": ">=6.0.0"
   },
   "bugs": {
     "url": "https://github.com/neophob/tokensearch.js/issues"
